@@ -1,0 +1,12 @@
+[build]
+  base = "project/frontend-challenge"
+  publish = "project/frontend-challenge/build"
+  command = "npm ci && npm run build"
+
+# Ensure SPA routes work (React Router)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+
