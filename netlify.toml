@@ -1,7 +1,10 @@
 [build]
   base = "project/frontend-challenge"
-  publish = "project/frontend-challenge/build"
+  publish = "build"
   command = "npm ci && npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
 
 # Ensure SPA routes work (React Router)
 [[redirects]]
