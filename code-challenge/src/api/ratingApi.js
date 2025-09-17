@@ -21,7 +21,7 @@ export const calculateAverageRating = async (playerId) => {
   const ratings = JSON.parse(ratingsStr);
   const playerRatings = ratings[playerId] || [];
   
-  await new Promise(resolve => setTimeout(resolve, 10000));
+  // Removed artificial 10-second delay that was blocking the UI
   
   if (playerRatings.length === 0) return 0;
   
